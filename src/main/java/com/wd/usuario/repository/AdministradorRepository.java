@@ -1,4 +1,4 @@
-package com.wd.security.repository;
+package com.wd.usuario.repository;
 
 import java.io.Serializable;
 

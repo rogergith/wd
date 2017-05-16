@@ -1,4 +1,4 @@
-package com.wd.security.service.impl;
+package com.wd.usuario.service.impl;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import com.wd.security.entity.Administrador;
 
 import com.wd.security.entity.Roles;
-import com.wd.security.repository.AdministradorRepository;
+import com.wd.usuario.repository.AdministradorRepository;
 
 @Service("AdministradorUserDetailService")
 public class AdministradorUserDetailServiceImpl implements UserDetailsService {
