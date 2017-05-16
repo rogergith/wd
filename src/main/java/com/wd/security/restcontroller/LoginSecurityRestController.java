@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wd.security.jwt.JwtTokenUtil;
+import com.wd.security.component.JwtTokenUtil;
 import com.wd.security.jwt.token.JwtAuthenticationResponse;
 import com.wd.security.restcontroller.form.LoginForm;
 

@@ -16,8 +16,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import com.wd.security.component.JwtAuthenticationEntryPoint;
 import com.wd.security.filter.AuthenticationTokenFilter;
-import com.wd.security.jwt.JwtAuthenticationEntryPoint;
 
 @SuppressWarnings("SpringJavaAutowiringInspection")
 @Configuration

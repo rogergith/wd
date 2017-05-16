@@ -1,4 +1,4 @@
-package com.wd.security.jwt;
+package com.wd.security.component;
 
 import java.io.IOException;
 import java.io.Serializable;

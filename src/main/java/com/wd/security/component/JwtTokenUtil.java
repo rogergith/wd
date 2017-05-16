@@ -1,4 +1,4 @@
-package com.wd.security.jwt;
+package com.wd.security.component;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -9,8 +9,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
-
-import com.wd.security.jwt.dtoentity.JwtAdministrador;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
