@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -39,6 +40,10 @@ public class Administrador {
     )
 	private List<Roles> roles;
 		
+	@OneToMany
+	@JoinColumn(name = "id_creador")
+	private List<Administrador> usuarios;
+	
 	public Administrador(){}
 
 	public int getCod_administrador() {
@@ -73,6 +78,14 @@ public class Administrador {
 		this.roles = roles;
 	}
 
-			
+	public List<Administrador> getUsuarios() {
+		return usuarios;
+	}
+
+	public void setUsuarios(List<Administrador> usuarios) {
+		this.usuarios = usuarios;
+	}
+
+		
 	
 }

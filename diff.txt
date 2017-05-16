@@ -1,0 +1,157 @@
+diff --git a/src/main/java/com/wd/security/entity/Administrador.java b/src/main/java/com/wd/security/entity/Administrador.java
+index bae47a4..29893f9 100644
+--- a/src/main/java/com/wd/security/entity/Administrador.java
++++ b/src/main/java/com/wd/security/entity/Administrador.java
+@@ -10,6 +10,7 @@ import javax.persistence.Id;
+ import javax.persistence.JoinColumn;
+ import javax.persistence.JoinTable;
+ import javax.persistence.ManyToMany;
++import javax.persistence.OneToMany;
+ import javax.persistence.Table;
+ 
+ 
+@@ -39,6 +40,10 @@ public class Administrador {
+     )
+ 	private List<Roles> roles;
+ 		
++	@OneToMany
++	@JoinColumn(name = "id_creador")
++	private List<Administrador> usuarios;
++	
+ 	public Administrador(){}
+ 
+ 	public int getCod_administrador() {
+@@ -73,6 +78,14 @@ public class Administrador {
+ 		this.roles = roles;
+ 	}
+ 
+-			
++	public List<Administrador> getUsuarios() {
++		return usuarios;
++	}
++
++	public void setUsuarios(List<Administrador> usuarios) {
++		this.usuarios = usuarios;
++	}
++
++		
+ 	
+ }
+diff --git a/src/main/java/com/wd/security/entity/Agente.java b/src/main/java/com/wd/security/entity/Agente.java
+deleted file mode 100644
+index 852eecb..0000000
+--- a/src/main/java/com/wd/security/entity/Agente.java
++++ /dev/null
+@@ -1,73 +0,0 @@
+-package com.wd.security.entity;
+-
+-import java.util.List;
+-
+-import javax.persistence.Column;
+-import javax.persistence.Entity;
+-import javax.persistence.FetchType;
+-import javax.persistence.Id;
+-import javax.persistence.JoinColumn;
+-import javax.persistence.JoinTable;
+-import javax.persistence.ManyToMany;
+-import javax.persistence.Table;
+-
+-@Entity 
+-@Table(name = "agente")
+-public class Agente {
+-
+-	@Id
+-	@Column(name = "idagente")
+-	private int cod_agente;
+-	
+-	@Column(name = "agente")
+-	private String agente;
+-	
+-	@Column(name = "password")
+-	private String password;
+-	
+-	@ManyToMany(fetch = FetchType.EAGER)
+-	@JoinTable(
+-		name = "agente_roles",
+-		joinColumns = {
+-			@JoinColumn(name = "id_agente", referencedColumnName = "idagente")
+-		},
+-		inverseJoinColumns = {
+-			@JoinColumn(name = "id_rol", referencedColumnName = "idroles")	
+-		}
+-	)
+-	private List<Roles> roles;
+-
+-	public int getCod_agente() {
+-		return cod_agente;
+-	}
+-
+-	public void setCod_agente(int cod_agente) {
+-		this.cod_agente = cod_agente;
+-	}
+-
+-	public String getAgente() {
+-		return agente;
+-	}
+-
+-	public void setAgente(String agente) {
+-		this.agente = agente;
+-	}
+-
+-	public List<Roles> getRoles() {
+-		return roles;
+-	}
+-
+-	public void setRoles(List<Roles> roles) {
+-		this.roles = roles;
+-	}
+-
+-	public String getPassword() {
+-		return password;
+-	}
+-
+-	public void setPassword(String password) {
+-		this.password = password;
+-	}
+-	
+-	
+-}
+diff --git a/src/main/java/com/wd/security/entity/Jugador.java b/src/main/java/com/wd/security/entity/Jugador.java
+deleted file mode 100644
+index eb55b01..0000000
+--- a/src/main/java/com/wd/security/entity/Jugador.java
++++ /dev/null
+@@ -1,5 +0,0 @@
+-package com.wd.security.entity;
+-
+-public class Jugador {
+-
+-}
+diff --git a/src/main/java/com/wd/security/entity/Roles.java b/src/main/java/com/wd/security/entity/Roles.java
+index 580865c..7a18b00 100644
+--- a/src/main/java/com/wd/security/entity/Roles.java
++++ b/src/main/java/com/wd/security/entity/Roles.java
+@@ -40,8 +40,6 @@ public class Roles {
+ 	@ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
+ 	private List<Administrador> administradores;
+ 	
+-	@ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
+-	private List<Agente> agentes;
+ 	
+ 	public Roles(){}
+ 
+@@ -77,14 +75,5 @@ public class Roles {
+ 		this.administradores = administradores;
+ 	}
+ 
+-	public List<Agente> getAgentes() {
+-		return agentes;
+-	}
+-
+-	public void setAgentes(List<Agente> agentes) {
+-		this.agentes = agentes;
+-	}
+-	
+-	
+ 
+ }

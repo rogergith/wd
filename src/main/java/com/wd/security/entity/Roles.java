@@ -40,8 +40,6 @@ public class Roles {
 	@ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
 	private List<Administrador> administradores;
 	
-	@ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-	private List<Agente> agentes;
 	
 	public Roles(){}
 
@@ -77,14 +75,5 @@ public class Roles {
 		this.administradores = administradores;
 	}
 
-	public List<Agente> getAgentes() {
-		return agentes;
-	}
-
-	public void setAgentes(List<Agente> agentes) {
-		this.agentes = agentes;
-	}
-	
-	
 
 }
