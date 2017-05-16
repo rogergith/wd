@@ -1,4 +1,4 @@
-package com.wd.security.entity;
+package com.wd.usuario.entity;
 
 import static javax.persistence.CascadeType.ALL;
 

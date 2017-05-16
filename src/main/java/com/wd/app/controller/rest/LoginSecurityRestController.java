@@ -1,4 +1,4 @@
-package com.wd.security.restcontroller;
+package com.wd.app.controller.rest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -20,8 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wd.security.component.JwtTokenUtil;
-import com.wd.security.jwt.token.JwtAuthenticationResponse;
-import com.wd.security.restcontroller.form.LoginForm;
+import com.wd.security.token.JwtAuthenticationResponse;
 
 @RestController
 @RequestMapping("/security")

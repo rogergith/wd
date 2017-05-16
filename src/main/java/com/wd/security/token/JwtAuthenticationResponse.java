@@ -1,4 +1,4 @@
-package com.wd.security.jwt.token;
+package com.wd.security.token;
 
 import java.io.Serializable;
 

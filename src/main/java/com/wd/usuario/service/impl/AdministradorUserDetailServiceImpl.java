@@ -15,9 +15,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.wd.security.entity.Administrador;
-
-import com.wd.security.entity.Roles;
+import com.wd.usuario.entity.Administrador;
+import com.wd.usuario.entity.Roles;
 import com.wd.usuario.repository.AdministradorRepository;
 
 @Service("AdministradorUserDetailService")

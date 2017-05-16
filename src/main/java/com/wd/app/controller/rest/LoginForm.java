@@ -1,4 +1,4 @@
-package com.wd.security.restcontroller.form;
+package com.wd.app.controller.rest;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.wd.security.entity;
+package com.wd.usuario.entity;
 
 
 import java.util.List;
