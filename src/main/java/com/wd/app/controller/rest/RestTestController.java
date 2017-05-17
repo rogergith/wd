@@ -26,7 +26,7 @@ public class RestTestController {
 	}
 	
 	/**
-	 * http://localhost:3351/recurso/saludo
+	 * http://localhost:3351/recurso/saludo_agente
 	 */
 	
 	@PreAuthorize("hasRole('AGENTE')")
