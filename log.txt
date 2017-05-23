@@ -1,0 +1,41 @@
+commit 4a1c653dff0b9d436616cf1d44563194791da813
+Author: Roger Araque <raismaelr@gmail.com>
+Date:   Fri May 19 17:50:00 2017 -0400
+
+    Se agrego la AngularJS 1.5.3
+
+commit 2e49bf99545acf5ee9f69902e5470e58447c297f
+Author: Roger Araque <raismaelr@gmail.com>
+Date:   Tue May 16 21:31:26 2017 -0400
+
+    inicio de la interfaz -> LOGIN y PRINCIAPL || se eliminaron carpetas y archivos que no usaremos. Dashboard a utilizar es AdminLTE-2.3.7
+
+commit ec042a56174b21ca318596b6070e47a5695c5495
+Author: Roger Araque <raismaelr@gmail.com>
+Date:   Tue May 16 19:28:45 2017 -0400
+
+    Se organizo paquetes y clases. || modulo: USUARIO, SECURITY Y APP
+
+commit 97603e0c19754036f38e74281ef27f4b4d4762ad
+Author: Roger Araque <raismaelr@gmail.com>
+Date:   Tue May 16 19:08:00 2017 -0400
+
+    Se organizo paquetes y clases
+
+commit 6a4ddda7f5283567e12d51c7db0da7f62c1b6c0d
+Author: Roger Araque <raismaelr@gmail.com>
+Date:   Tue May 16 18:45:53 2017 -0400
+
+    Se organizo paquetes y clases
+
+commit 985229dfab5b9be8f39ba81628f9d4b465ad739e
+Author: Roger Araque <raismaelr@gmail.com>
+Date:   Tue May 16 18:38:54 2017 -0400
+
+    agregamos el atributo id_creador en Administrador. Un Administrador crear otros Administradores(Admins, Agente, apostadores)
+
+commit e22886b59f31e7fb592e4ff8c7aaf03b57b604d7
+Author: Roger Araque <raismaelr@gmail.com>
+Date:   Tue May 16 12:23:29 2017 -0400
+
+    commit iniciar, todo funciona! este commit es por si todo sale mal y debamos hacer un hard reset
