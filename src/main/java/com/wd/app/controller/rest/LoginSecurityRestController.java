@@ -48,7 +48,7 @@ public class LoginSecurityRestController {
 		
 		//perform the security		
 		
-		LOG.info("bandera 0");
+		LOG.info("bandera 0 "+login.toString());
 		
 		UsernamePasswordAuthenticationToken authToken =
 				new UsernamePasswordAuthenticationToken(login.getUsername(), login.getPassword());

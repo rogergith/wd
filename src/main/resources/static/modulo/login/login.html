@@ -1,40 +1,23 @@
-<div class="login-box">
+<div class = "caja_login">
+		<div class="row center-xs">
+			<div class="col-xs-6">
+				<h1>WAGER DYNAMIC</h1>
+			</div>
+		</div>
 
-  <div class="login-logo">
-    <a href="#"><b>{{wager}}</b>{{dynamic}}</a>
-  </div>
-  
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-      <p class="login-box-msg">Administrador de Apuestas</p>
-  
-      <div class="form-group has-feedback">
-        <input ng-model="username" type="text" class="form-control" placeholder="username">
-      </div>
-      
-      <div class="form-group has-feedback">
-        <input ng-model="password" type="password" class="form-control" placeholder="password">
-      </div>
-      
-      <div class="row">
-        <!-- /.col -->
-        <div class="col-xs-12">
-          <button ng-click="login(username, password)" type="submit" class="btn btn-primary btn-block btn-flat">ingresar</button>
-        </div>
-        <!-- /.col -->
-      </div>
-      <div class="row">
-        <!-- /.col -->
-        <div class="col-xs-12">
-        	<pre>{{response|json}}</pre>
-        </div>
-        <!-- /.col -->
-      </div>
-    
-  </div>
-  <!-- /.login-box-body -->
-
+		<div class="row center-xs">
+			
+			<div class="col-xs-3">
+				
+				<input ng-model="username" class="form-control" type="text" placeholder="username"> 
+				
+				<input ng-model="password" class="form-control" type="password" placeholder="password">
+				
+				<button ng-click="login(username, password)" type="button" class="btn btn-primary btn-lg btn-block">entrar</button>
+				
+			</div>
+		
+		</div>
 </div>
-<!-- /.login-box -->
 
-</body>
+
