@@ -1,13 +1,22 @@
-<div class = "caja_login">
-		<div class="row center-xs">
-			<div class="col-xs-6">
-				<h1>WAGER DYNAMIC</h1>
+<div class = "caja_login ">
+
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<h1 align="center">WAGER DYNAMIC</h1>
 			</div>
 		</div>
-
-		<div class="row center-xs">
+		
+		<div class="row" ng-show="errorauth">
+		
+			<div class="col-md-4 col-md-offset-4">
+				<p class="bg-danger">Usuario o clave incorrectos</p>
+			</div>
 			
-			<div class="col-xs-3">
+		</div>
+	
+		<div class="row">
+			
+			<div class="col-md-4 col-md-offset-4">
 				
 				<input ng-model="username" class="form-control" type="text" placeholder="username"> 
 				
@@ -16,8 +25,8 @@
 				<button ng-click="login(username, password)" type="button" class="btn btn-primary btn-lg btn-block">entrar</button>
 				
 			</div>
-		
 		</div>
+
 </div>
 
 

@@ -57,6 +57,7 @@ public class AuthenticationTokenFilter extends OncePerRequestFilter {
 				UsernamePasswordAuthenticationToken authentication = 
 						new UsernamePasswordAuthenticationToken(userDetails, null ,userDetails.getAuthorities());
 				
+				
 				authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 				
 				LOG.info("User '"+username+"' autenticado 'Configuracion del contexto de seguridad'");

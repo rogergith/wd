@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wd.security.component.JwtTokenUtil;
 import com.wd.security.token.JwtAuthenticationResponse;
+import com.wd.usuario.entity.dto.JwtUser;
 
 @RestController
 @RequestMapping("/security")
@@ -47,14 +48,17 @@ public class LoginSecurityRestController {
 	public ResponseEntity<JwtAuthenticationResponse> login(@RequestBody LoginForm login){
 		
 		//perform the security		
-		
 		LOG.info("bandera 0 "+login.toString());
 		
-		UsernamePasswordAuthenticationToken authToken =
-				new UsernamePasswordAuthenticationToken(login.getUsername(), login.getPassword());
+		UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(login.getUsername(), login.getPassword());
+		
+		LOG.info("bandera 1 "+login.toString());
+			
+		
 		Authentication authentication = authManager.authenticate(authToken);
 	
-		LOG.info("bandera 1");
+		
+		LOG.info("bandera 2");
 		
 		if(authentication.isAuthenticated()){
 			LOG.info("USTED ESTÁ AUTENTICADO");
@@ -63,11 +67,10 @@ public class LoginSecurityRestController {
 		}
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		
-		LOG.info("bandera 2");
-		UserDetails userDetails = userDetailsService.loadUserByUsername(login.getUsername());
-
 		LOG.info("bandera 3");
+		UserDetails userDetails = userDetailsService.loadUserByUsername(login.getUsername());
 		
+		LOG.info("bandera 4");
 		
 		String token = jwtTokenUtil.generateToken(userDetails);
 		

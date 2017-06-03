@@ -27,9 +27,9 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Se
 		 porque no hay una página de inicio de sesión a la que redireccionar
 		 
 		 */
-		response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "NO AUTORIZADO");
+		response.setHeader("mensaje", "Usuario o clave invalida");
+		response.sendError(HttpServletResponse.SC_FORBIDDEN, "CREDENCIALES INCORRECTAS");
 	
-		
 		
 	}
 
