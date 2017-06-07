@@ -1,5 +1,5 @@
 server:
-  port: 3351 #configurar numero de puerto
+  port: 9010 #configurar numero de puerto
    
 spring:
   datasource:
