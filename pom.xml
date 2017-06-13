@@ -6,7 +6,7 @@
 	<groupId>com.wd</groupId>
 	<artifactId>apuestaswd</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>apuestaswd</name>
 	<description>Sistema de apuestas</description>

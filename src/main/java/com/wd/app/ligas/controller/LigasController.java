@@ -12,7 +12,7 @@ import com.wd.app.ligas.model.Equipo;
 import com.wd.app.ligas.service.LigasService;
 
 @RestController
-@RequestMapping("/ligas")
+@RequestMapping("/wd")
 public class LigasController {
 
 	@Autowired
@@ -20,9 +20,9 @@ public class LigasController {
 	private LigasService ligaService;
 	
 	/*
-	 * http://localhost:9010/ligas/
+	 * http://localhost:9010/wd/deporte/
 	 */
-	@PostMapping("/")
+	@PostMapping("/deporte")
 	public void almacenar(@RequestBody Deporte deporte){
 	
 		ligaService.almacenarDeporte(deporte);

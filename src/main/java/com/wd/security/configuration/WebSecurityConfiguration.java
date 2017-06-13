@@ -52,6 +52,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
 		 return new AuthenticationTokenFilter();
 	 } 
 
+	 
+	 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
@@ -77,9 +79,9 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
                 "/**/*.html",
                 "/**/*.css",
                 "/**/*.js"
-        ).permitAll()
-        .antMatchers("/security/login/**").permitAll()
-        .anyRequest().authenticated();
+        ).permitAll();
+        //.antMatchers("/wd/security/login/**").permitAll()
+        //.anyRequest().authenticated();
 
 		// Custom JWT based security filter
 		http

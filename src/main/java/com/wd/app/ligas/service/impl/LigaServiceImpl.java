@@ -11,7 +11,7 @@ import com.wd.app.ligas.service.LigasService;
 @Service("LigaServiceImpl")
 public class LigaServiceImpl implements LigasService {
 
-	private static String URL_POST_SAVE_TEAM = "http://localhost:9011/deporte/";
+	private static String URL_POST_SAVE_TEAM = "http://192.168.1.48:8080/ligas/deporte/";
 	
 	@Override
 	public void almacenarDeporte(Deporte deporte) {

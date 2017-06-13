@@ -40,7 +40,7 @@ public class AuthenticationTokenFilter extends OncePerRequestFilter {
 		
 		String username = jwtTokenUtil.getUsernameFromToken(authToken);
 		
-		LOG.info("bandera 0");
+		LOG.info("bandera 0 - username: "+username);
 		
 		if(username != null && SecurityContextHolder.getContext().getAuthentication() == null){
 		

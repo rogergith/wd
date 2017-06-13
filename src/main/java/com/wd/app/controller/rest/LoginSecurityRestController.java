@@ -80,7 +80,7 @@ public class LoginSecurityRestController {
 		
 	}
 	/*
-	 * http://localhost:3351/security/protegido
+	 * http://localhost:9010/wd/security/protegido
 	 */
 	@GetMapping("/protegido")
 	@PreAuthorize("hasRole('ADMIN')")
