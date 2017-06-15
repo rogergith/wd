@@ -4,8 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.wd</groupId>
-	<artifactId>apuestaswd</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>wd</artifactId>
 	<packaging>war</packaging>
 
 	<name>apuestaswd</name>

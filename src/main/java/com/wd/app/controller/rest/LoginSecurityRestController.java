@@ -24,7 +24,7 @@ import com.wd.security.token.JwtAuthenticationResponse;
 import com.wd.usuario.entity.dto.JwtUser;
 
 @RestController
-@RequestMapping("/security")
+@RequestMapping("/api")
 public class LoginSecurityRestController {
 
 	private static final Log LOG = LogFactory.getLog(LoginSecurityRestController.class);
